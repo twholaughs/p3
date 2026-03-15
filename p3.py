@@ -92,6 +92,7 @@ def Choice3(d,f):
     name= input("Enter student name: ")
     month= input("Enter month:")
     score= int(input("Enter new score: "))
+    newscore=0
 
     index1=0
     index2=0
@@ -105,9 +106,9 @@ def Choice3(d,f):
     for j in range(len(d)):
         if d[j][0]==name:
             index2=j
-            score= int(d[j][i])+score
+            newscore= int(d[j][index1])+score
 
-    d[index2][index1]=str(score//2)
+    d[index2][index1]=str(newscore/2)
 
     Write_Csv_File(d,f)
 
